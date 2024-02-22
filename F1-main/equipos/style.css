@@ -1,0 +1,100 @@
+
+.Escuderia {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #1e1e1e;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.Pilotos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #1e1e1e;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.Pilotos img {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Pilotos img:hover {
+    transform: scale(1.05);
+}
+
+.Pilotos:hover {
+    transform: scale(1.05);
+}
+
+.Coche {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #1e1e1e;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.Coche img {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 430px;
+}
+
+.Coche img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition:  .5s ease;
+}
+
+.Coche img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.Escuderia:hover {
+    transform: scale(1.05);
+}
+
+.Escuderia h2 {
+    color: #1e1e1e;
+}
+
+.GP {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.team {
+    color: #777;
+}
+
+.Escuderia-info {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

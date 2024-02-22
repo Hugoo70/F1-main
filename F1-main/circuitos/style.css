@@ -1,0 +1,46 @@
+.Escuderia {
+    flex-wrap: wrap;
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+}
+
+.Escuderia img {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    border: #f8f8f8;
+    border-radius: 5px;
+
+}
+
+.Escuderia:hover {
+    transform: scale(1.05);
+    border-bottom-right-radius: 8px;
+    border-color: #cccccc red red #cccccc;
+}
+
+.Escuderia h2 {
+    color: #1e1e1e;
+}
+
+.GP {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.team {
+    color: #777;
+}
+
+.Escuderia-info {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="web icon" type="png" href="../img/logoAntiguo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link  rel="stylesheet" href="../cabecera.css">
+    <title>Fórmula 1</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../img/logo.png" alt="logo-f1" width="10%" height="15%">
+        </div>
+        <nav>
+           <ul class="nav-links">
+                <li><a href="../index/index.html">Inicio</a></li>
+                <li><a href="../Resumen/resumen.html">Resumen</a></li>
+                <li><a href="../carreras/carreras.html">Carreras</a></li>
+                <li><a href="../equipos/equipos.html">Equipos</a></li>
+                <li><a href="../pilotos/pilotos.html">Pilotos</a></li>
+                <li><a href="../circuitos/circuitos.html">Circuitos</a></li>
+           </ul>            
+        </nav>
+        <a class="btn" href="../log-in/log-in.html"><button>Log-In</button></a>
+    </header>
+
+    <div class="resumen-info">
+        <h2>Escuderias 2024</h2>
+        <p>Descrube todas las escuderias que nos acompañan esta Temporada 2024:</p>
+    </div>
+
+        <main>
+                <select multiple id="año" onchange="mostrarTabla()">
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                </select>
+
+                <select multiple id="tipo" onchange="mostrarTabla()">
+                    <option value="carreras">CARRERAS</option>
+                    <option value="pilotos">PILOTOS</option>
+                    <option value="equipos">EQUIPOS</option>
+                    <option value="dhl">DHL FASTEST LAP AWARD</option>
+                </select>
+
+                <select multiple id="año">
+                    <option>2024</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                    <option>2021</option>
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                </select>
+            </main>
+
+                <div id="tabla-container">
+                </div>
+
+    </div>
+
+    <footer>
+        <img src="../img/logo-sinfondo.png">
+        <hr>
+        <div class="cuerpo">
+
+            <div id="RS">
+                <p>Siguenos en:
+                <a href="#" class="icon"><i class="fa-brands fa-google" style="color: red;"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-twitter" style="color: white;"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-instagram" style="color: red;"></i></a>
+                <a href="https://github.com/Hugoo70" class="icon"><i class="fa-brands fa-github" style="color: white;"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-twitch"  style="color: red;"></i></a> </p>
+            </div>
+            <p>&copy; 2024 Fórmula 1 - By Hugo Jiménez</p>
+            <p style="font-size: small;" &emsp>Condiciones de uso&emsp;&emsp;Aviso de privacidad&emsp;&emsp;Guía de la No F1&emsp;&emsp;Aviso legalAviso de cookies y personalizar las preferencias
+                &emsp;&emsp;Anuncios basados en intereses</p>
+        </div>
+    </footer>
+
+    <script>
+        function mostrarTabla() {
+            // Obtener el valor seleccionado
+            var opcionSeleccionada = document.getElementById("año").value;
+        
+            switch (opcionSeleccionada) {
+                case "2024":
+                tabla = `<h1>No hay datos de la Temporada 2024 todavia!</h1>`;
+                break;
+                case "2023":
+                    tabla = `
+                    <h1>2023 Resumen de Temporada</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="pos">POS</th>
+                                <th class="team">TEAM</th>
+                                <th class="pts">PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="pos">1</td>
+                                <td class="team">RED BULL RACING HONDA RBPT</td>
+                                <td class="pts">860</td>
+                            </tr>
+                            <tr>
+                                <td class="pos">2</td>
+                                <td class="team">MERCEDES</td>
+                                <td class="pts">409</td>
+                            </tr>
+                            <tr>
+                                <td class="pos">3</td>
+                                <td class="team">FERRARI</td>
+                                <td class="pts">406</td>
+                            </tr>
+                            <tr>
+                                <td class="pos">5</td>
+                                <td class="team">ASTON MARTIN ARAMCO MERCEDES</td>
+                                <td class="pts">280</td>
+                            </tr>
+                            <tr>
+                                <td class="pos">6</td>
+                                <td class="team">ALPINE RENAULT</td>
+                                <td class="pts">120</td>
+                            </tr>
+                            <tr>
+                                <td class="pos">7</td>
+                                <td class="team">WILLIAMS MERCEDES</td>
+                                <td class="pts">28</td>
+                            </tr>
+                            <tr>
+                                <td class="pos">8</td>
+                                <td class="team">ALPHATAURI HONDA RBPT</td>
+                                <td class="pts">25</td>
+                            </tr>
+                            <tr>
+                                <td class="pos">10</td>
+                                <td class="team">ALFA ROMEO FERRARI</td>
+                                <td class="pts">16</td>
+                            </tr>
+                            <tr>
+                                <td class="pos">12</td>
+                                <td class="team">HAAS FERRARI</td>
+                                <td class="pts">12</td>
+                            </tr>
+                        </tbody>
+                    </table>`;
+                    break;
+                case "2022":
+                    
+                    tabla = ` 
+                    <h1>2022 Resumen de Temporada</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>POS</th>
+                                <th>TEAM</th>
+                                <th>PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>RED BULL RACING HONDA RBPT</td>
+                                <td>860</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>MERCEDES</td>
+                                <td>409</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>FERRARI</td>
+                                <td>406</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>ASTON MARTIN ARAMCO MERCEDES</td>
+                                <td>280</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>ALPINE RENAULT</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>WILLIAMS MERCEDES</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>ALPHATAURI HONDA RBPT</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>ALFA ROMEO FERRARI</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>HAAS FERRARI</td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>`;
+                    break;
+                case "2021":
+                    tabla = ` 
+                    <h1>2021 Resumen de Temporada</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>POS</th>
+                                <th>TEAM</th>
+                                <th>PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>MERCEDES</td>
+                                <td>613.5</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>RED BULL RACING HONDA</td>
+                                <td>585.5</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>FERRARI</td>
+                                <td>323.5</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>MCLAREN MERCEDES</td>
+                                <td>275</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>ALPINE RENAULT</td>
+                                <td>155</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>ALPHATAURI HONDA</td>
+                                <td>142</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>ASTON MARTIN MERCEDES</td>
+                                <td>77</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>WILLIAMS MERCEDES</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>ALFA ROMEO RACING FERRARI</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>HAAS FERRARI</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>`;
+                    break;
+                case "2020":
+                    tabla = ` 
+                    <h1>2020 Resumen de Temporada</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>POS</th>
+                                <th>TEAM</th>
+                                <th>PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>MERCEDES</td>
+                                <td>573</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>RED BULL RACING HONDA</td>
+                                <td>319</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>MCLAREN RENAULT</td>
+                                <td>202</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>RACING POINT BWT MERCEDES</td>
+                                <td>195</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>RENAULT</td>
+                                <td>181</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>FERRARI</td>
+                                <td>131</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>ALPHATAURI HONDA</td>
+                                <td>107</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>ALFA ROMEO RACING FERRARI</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>HAAS FERRARI</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>WILLIAMS MERCEDES</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>`;
+                    break;
+                case "2019":
+                    tabla = ` 
+                    <h1>2019 Resumen de Temporada</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>POS</th>
+                                <th>TEAM</th>
+                                <th>PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>MERCEDES</td>
+                                <td>739</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>FERRARI</td>
+                                <td>504</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>RED BULL RACING HONDA</td>
+                                <td>417</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>MCLAREN RENAULT</td>
+                                <td>145</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>RENAULT</td>
+                                <td>91</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>SCUDERIA TORO ROSSO HONDA</td>
+                                <td>85</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>RACING POINT BWT MERCEDES</td>
+                                <td>73</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>ALFA ROMEO RACING FERRARI</td>
+                                <td>57</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>HAAS FERRARI</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>WILLIAMS MERCEDES</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>`;
+                    break;
+                case "2018":
+                    tabla = ` 
+                    <h1>2018 Resumen de Temporada</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>POS</th>
+                                <th>TEAM</th>
+                                <th>PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>MERCEDES</td>
+                                <td>655</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>FERRARI</td>
+                                <td>571</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>RED BULL RACING TAG HEUER</td>
+                                <td>419</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>RENAULT</td>
+                                <td>122</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>HAAS FERRARI</td>
+                                <td>93</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>MCLAREN RENAULT</td>
+                                <td>62</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>FORCE INDIA MERCEDES</td>
+                                <td>52</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>SAUBER FERRARI</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>SCUDERIA TORO ROSSO HONDA</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>WILLIAMS MERCEDES</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>FORCE INDIA SAHARA</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>`;
+                    break;
+                case "2017":
+                    tabla = ` 
+                    <h1>2017 Resumen de Temporada</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>POS</th>
+                                <th>TEAM</th>
+                                <th>PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>MERCEDES</td>
+                                <td>655</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>FERRARI</td>
+                                <td>571</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>RED BULL RACING TAG HEUER</td>
+                                <td>419</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>RENAULT</td>
+                                <td>122</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>HAAS FERRARI</td>
+                                <td>93</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>MCLAREN RENAULT</td>
+                                <td>62</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>FORCE INDIA MERCEDES</td>
+                                <td>52</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>SAUBER FERRARI</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>SCUDERIA TORO ROSSO HONDA</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>WILLIAMS MERCEDES</td>
+                                <td>7</td>
+                            </tr>
+                        </tbody>
+                    </table>`;
+                    break;
+                case "2016":
+                    tabla = ` 
+                    <h1>2016 Resumen de Temporada</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>POS</th>
+                                <th>TEAM</th>
+                                <th>PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>MERCEDES</td>
+                                <td>655</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>FERRARI</td>
+                                <td>571</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>RED BULL RACING TAG HEUER</td>
+                                <td>419</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>RENAULT</td>
+                                <td>122</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>HAAS FERRARI</td>
+                                <td>93</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>MCLAREN RENAULT</td>
+                                <td>62</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>FORCE INDIA MERCEDES</td>
+                                <td>52</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>SAUBER FERRARI</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>SCUDERIA TORO ROSSO HONDA</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>WILLIAMS MERCEDES</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>MRT MERCEDES</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>`;
+                    break;                
+                case "2015":
+                    tabla = ` 
+                    <h1>2015 Resumen de Temporada</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>POS</th>
+                                <th>TEAM</th>
+                                <th>PTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>MERCEDES</td>
+                                <td>655</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>FERRARI</td>
+                                <td>571</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>RED BULL RACING TAG HEUER</td>
+                                <td>419</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>RENAULT</td>
+                                <td>122</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>HAAS FERRARI</td>
+                                <td>93</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>MCLAREN RENAULT</td>
+                                <td>62</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>FORCE INDIA MERCEDES</td>
+                                <td>52</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>SAUBER FERRARI</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>SCUDERIA TORO ROSSO HONDA</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>WILLIAMS MERCEDES</td>
+                                <td>7</td>
+                            </tr>
+                        </tbody>
+                    </table>`;
+                    break;                    
+                    default:
+                    tabla = "Hola"; // Puedes dejarlo vacío o mostrar un mensaje por defecto
+            }
+    
+            // Mostrar la tabla en el contenedor
+            document.getElementById("tabla-container").innerHTML = tabla;
+        }
+    </script>
+</body>
+</html>

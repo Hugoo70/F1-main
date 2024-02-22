@@ -1,0 +1,72 @@
+.Piloto {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+.nombre{
+    display: flex;
+    height: 3vw;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+}
+#equipo{
+    text-decoration: none;
+}
+#bandera{
+    width: 25%;
+    border:1PX solid #333;
+    border-radius: 8px;
+}
+
+.Fotos{
+    display: flex;
+    flex-direction: row;
+}
+#logo {
+    width: 60%;
+    text-align: center;
+    text-decoration: none;
+    border: #f8f8f8;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+#numero{
+    display: flex;
+    align-self: end;
+    text-decoration: none;
+    border: #f8f8f8;
+    width: auto;
+    width: 40%;
+}
+
+.Piloto:hover {
+    transform: scale(1.05);
+    border-bottom-right-radius: 8px;
+    border-color: #cccccc red red #cccccc;
+}
+
+.GP {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.team {
+    color: #777;
+}
+
+.Escuderia-info {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

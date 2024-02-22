@@ -1,0 +1,102 @@
+.Escuderia {
+    flex-wrap: wrap;
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+}
+
+.Escuderia img {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    border: #f8f8f8;
+    border-radius: 5px;
+
+}
+
+#año{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: larger;
+    text-decoration: none;
+}
+
+.Escuderia:hover {
+    transform: scale(1.05);
+    border-bottom-right-radius: 8px;
+    border-color: #cccccc red red #cccccc;
+}
+
+.resumen-info {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    margin-bottom: 4%;    
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.pos {
+    width: 5%;
+}
+
+.team {
+    width: 45%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.pts {
+    width: 10%;
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
