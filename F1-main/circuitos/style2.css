@@ -1,0 +1,51 @@
+.Circuitos {
+    flex-wrap: wrap;
+    width: 40%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+}
+
+.Circuitos img {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    border: #f8f8f8;
+    border-radius: 5px;
+}
+fieldset{
+    margin: 1%;
+    border-radius: 8PX;
+    border-color: red red white white;
+}
+.Circuitos:hover {
+    transform: scale(1.05);
+    border-bottom-right-radius: 8px;
+    border-color: #cccccc red red #cccccc;
+}
+
+.Circuitos h2 {
+    color: #1e1e1e;
+}
+
+.Padre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 40%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.Circuitos-info {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

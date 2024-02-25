@@ -1,6 +1,6 @@
-.Escuderia {
+.Circuitos {
     flex-wrap: wrap;
-    width: 45%;
+    width: 44%;
     margin: 10px;
     padding: 20px;
     border: 1px solid #cccccc;
@@ -10,22 +10,21 @@
     text-decoration: none;
 }
 
-.Escuderia img {
+.Circuitos img {
     width: 100%;
     text-align: center;
     text-decoration: none;
     border: #f8f8f8;
     border-radius: 5px;
-
 }
 
-.Escuderia:hover {
+.Circuitos:hover {
     transform: scale(1.05);
     border-bottom-right-radius: 8px;
     border-color: #cccccc red red #cccccc;
 }
 
-.Escuderia h2 {
+.Circuitos h2 {
     color: #1e1e1e;
 }
 
@@ -38,7 +37,7 @@
     color: #777;
 }
 
-.Escuderia-info {
+.Circuitos-info {
     background-color: #1e1e1e;
     color: white;
     padding: 20px;
